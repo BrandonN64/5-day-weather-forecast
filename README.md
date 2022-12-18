@@ -4,3 +4,4 @@ For this homework project, we were tasked with making a 5 day weather forecast a
 
 With this app, you would enter a city name and it would make an API call to get the 5 day weather forecast for the specified area.
 
+![ForecastApp](./assets/weatherForceast.png "WeatherForecast")
