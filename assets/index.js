@@ -4,14 +4,28 @@ var userCity = document.querySelector('#cityName')
 var openWeatherApi = '5d21e5ba4232f7c4c356ba55ff9657a1'
 var apiCallUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + userCity.value + "&appid=" + openWeatherApi
 
-// TODO: Create an array of questions for user input
-const questions = [];
+function cityFinder(event) {
+    event.preventDefault();
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+    var userCityInput = document.getElementById("cityName").value;
 
-// TODO: Create a function to initialize app
-function init() {}
+    if (!userCityInput) {
+        alert("Enter the name of a city!");
+        return;
+    }
+}
 
-// Function call to initialize app
-init();
+function weatherForecast() {
+    fetch(apiCallUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw response;
+            }
+            return response.json();
+
+        }).then(data => {
+            var lon = data.coord.lon
+            var lat = data.coord.lat
+            var updatedApiCallUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + '&lon=' + lon + '&units=imperial&appid=' + APIKey;
+        });
+};
