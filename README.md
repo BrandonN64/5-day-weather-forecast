@@ -1,4 +1,4 @@
-# module-6-readme-generator
+# module-6-weather-forceast
 
 For this homework project, we were tasked with making a 5 day weather forecast app using HTML, Javascript, and a 3rd party API called OpenWeather. 
 
